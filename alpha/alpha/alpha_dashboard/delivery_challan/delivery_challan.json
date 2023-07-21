@@ -1,0 +1,51 @@
+{
+ "cards": [
+  {
+   "card": "No of Delivery Challan Created"
+  },
+  {
+   "card": "Total No of Products Sell"
+  },
+  {
+   "card": "Amount of Product Sold"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Delivery Challan Created",
+   "width": "Half"
+  },
+  {
+   "chart": "Amount Of Products Sold",
+   "width": "Half"
+  },
+  {
+   "chart": "Quantity of Each Product Sell",
+   "width": "Half"
+  },
+  {
+   "chart": "Amount of Each Model Sell",
+   "width": "Half"
+  },
+  {
+   "chart": "Quantity of Each Product Sell 2",
+   "width": "Half"
+  },
+  {
+   "chart": "Amount of Each Product Sold 2",
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-07-18 12:08:38.822179",
+ "dashboard_name": "Delivery Challan",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 2,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2023-07-20 11:12:50.615769",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "Delivery Challan",
+ "owner": "Administrator"
+}

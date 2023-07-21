@@ -1,0 +1,240 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "autoname": "format:ADH-C-{MM}{YY}-{######}",
+ "creation": "2023-07-07 12:34:44.604064",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "challan_details_section",
+  "customer_name2",
+  "purchase_date",
+  "complain_regarding_any_other_purchases",
+  "search_challan_column",
+  "challan_no",
+  "warranty",
+  "challan_details_section2",
+  "invoice_no",
+  "challan_date",
+  "column_break_f45z",
+  "invoice_date",
+  "delivery_date",
+  "customer_details_section",
+  "phone_no",
+  "column_break_zvar",
+  "area",
+  "column_break_fmyl",
+  "city",
+  "section_break_prt3",
+  "add_reference_no",
+  "service_centre_name",
+  "column_break_cdqy",
+  "claim_no",
+  "product_details_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "challan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Complaint Registration"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Challan No",
+   "options": "Delivery Challan",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "challan_no.invoice_no",
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice #",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.challan_date",
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.invoice_date",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_details_section",
+   "fieldtype": "Section Break",
+   "label": "Product Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Complaint item"
+  },
+  {
+   "fieldname": "customer_name2",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "search_challan_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "complain_regarding_any_other_purchases",
+   "fieldtype": "Check",
+   "label": "Complaint Regarding Any Other Purchases"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fetch_from": "customer_name2.customer_mobile",
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "challan_details_section2",
+   "fieldtype": "Section Break",
+   "label": "Challan Details"
+  },
+  {
+   "fieldname": "column_break_zvar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name2.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_f45z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name2.area",
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fmyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "STANDARAD",
+   "fieldname": "warranty",
+   "fieldtype": "Select",
+   "label": "Warranty",
+   "options": "NOT KNOWN\nNO WARRANTY\nSTANDARAD\nSURAKSHA\nSAMSUNG EXTENDED"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "add_reference_no",
+   "fieldtype": "Data",
+   "label": "Add Reference No"
+  },
+  {
+   "fieldname": "claim_no",
+   "fieldtype": "Data",
+   "label": "Claim No"
+  },
+  {
+   "fieldname": "service_centre_name",
+   "fieldtype": "Data",
+   "label": "Service Centre Name"
+  },
+  {
+   "fieldname": "section_break_prt3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cdqy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-13 14:57:25.895322",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "Complaint",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

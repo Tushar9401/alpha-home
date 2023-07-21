@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 18:47:55.561732",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product",
+  "sales_person",
+  "qty",
+  "srp",
+  "billing_price",
+  "group",
+  "brand",
+  "category",
+  "sub_category",
+  "serial_number",
+  "claim_number",
+  "model_number_hidden"
+ ],
+ "fields": [
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Model #",
+   "options": "Product",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Person",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "srp",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "SRP",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billing_price",
+   "fieldtype": "Currency",
+   "label": "Billing Price",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.group",
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Group",
+   "options": "Item Group"
+  },
+  {
+   "fetch_from": "product.brand",
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.category",
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Item Category"
+  },
+  {
+   "fetch_from": "product.sub_category",
+   "fieldname": "sub_category",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sub Category",
+   "options": "Item Sub Category"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial #",
+   "reqd": 1
+  },
+  {
+   "fieldname": "claim_number",
+   "fieldtype": "Data",
+   "label": "Claim #"
+  },
+  {
+   "fetch_from": "product.model_number",
+   "fieldname": "model_number_hidden",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Model #"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-05 18:47:55.561732",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "Delivery Challan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

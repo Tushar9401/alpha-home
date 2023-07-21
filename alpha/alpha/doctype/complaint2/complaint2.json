@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "autoname": "format:ADH-C-{MM}{YY}-{######}",
+ "creation": "2023-07-10 11:59:40.325333",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "challan_details_section",
+  "search_challan_by_name_column",
+  "customer_name2",
+  "complain_regarding_any_other_product",
+  "search_challan_by_phone_no_column",
+  "customer_mobile2",
+  "column_break_nfuk",
+  "challan_no",
+  "section_break_6r2z",
+  "invoice_no",
+  "delivery_date",
+  "challan_date",
+  "invoice_date",
+  "section_customer",
+  "column_break_5",
+  "address",
+  "column_break_8",
+  "city",
+  "column_break_19",
+  "product_details_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "challan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Complain Regarding Recent Delivery"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Challan No",
+   "options": "Delivery Challan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name2",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_mobile2",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fetch_from": "challan_no.invoice_no",
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice #",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.challan_date",
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "challan_no.invoice_date",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_customer",
+   "fieldtype": "Section Break",
+   "label": "Complain Regarding Any Other Product"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name.customer_address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name.city",
+   "fetch_if_empty": 1,
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_details_section",
+   "fieldtype": "Section Break",
+   "label": "Product Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Complaint item"
+  },
+  {
+   "fieldname": "search_challan_by_phone_no_column",
+   "fieldtype": "Column Break",
+   "label": "Search Challan By Phone No"
+  },
+  {
+   "fieldname": "section_break_6r2z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nfuk",
+   "fieldtype": "Column Break",
+   "label": "Search Challan"
+  },
+  {
+   "fieldname": "search_challan_by_name_column",
+   "fieldtype": "Column Break",
+   "label": "Search Challan By Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "complain_regarding_any_other_product",
+   "fieldtype": "Check",
+   "label": "Complain Regarding Any Other Product"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-10 14:19:48.656641",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "Complaint2",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

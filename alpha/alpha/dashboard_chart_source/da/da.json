@@ -1,0 +1,13 @@
+{
+ "creation": "2023-07-18 15:54:31.387589",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2023-07-18 15:54:31.387589",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "DA",
+ "owner": "Administrator",
+ "source_name": "DA",
+ "timeseries": 0
+}

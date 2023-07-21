@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2023-07-19 14:20:10.299530",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-07-20 17:25:47.729411",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "deliveryy",
+ "owner": "Administrator",
+ "page_name": "deliveryy",
+ "roles": [
+  {
+   "role": "ADH Admin"
+  },
+  {
+   "role": "Administrator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Delivery Challan"
+}

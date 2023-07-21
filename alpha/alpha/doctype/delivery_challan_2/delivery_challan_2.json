@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "autoname": "format:ADH-DC-{MM}{YY}-{######}",
+ "creation": "2023-07-20 11:00:56.000884",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_customer",
+  "customer_name",
+  "customer_mobile",
+  "customer_email",
+  "column_break_5",
+  "customer_phone",
+  "customer_other",
+  "address",
+  "column_break_8",
+  "area",
+  "pincode",
+  "city",
+  "challan_details_section",
+  "challan_brand",
+  "challan_date",
+  "invoice_no",
+  "invoice_date",
+  "column_break_17",
+  "dont_know_delivery_date",
+  "call_and_go",
+  "delivery_date",
+  "column_break_19",
+  "internal_remarks",
+  "customer_remarks",
+  "product_details_section",
+  "items",
+  "total_price",
+  "original_delivery_date",
+  "amended_from",
+  "customer_name_hidden"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_customer",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_name.customer_mobile",
+   "fieldname": "customer_mobile",
+   "fieldtype": "Data",
+   "label": "Mobile #",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_name.customer_email",
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name.customer_phone",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Phone #"
+  },
+  {
+   "fetch_from": "customer_name.customer_other",
+   "fieldname": "customer_other",
+   "fieldtype": "Data",
+   "label": "Other #`"
+  },
+  {
+   "fetch_from": "customer_name.customer_address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name.area",
+   "fetch_if_empty": 1,
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_name.pincode",
+   "fetch_if_empty": 1,
+   "fieldname": "pincode",
+   "fieldtype": "Link",
+   "label": "Pincode",
+   "options": "Address Info",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_name.city",
+   "fetch_if_empty": 1,
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "challan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Challan Details"
+  },
+  {
+   "default": "Samsung",
+   "fieldname": "challan_brand",
+   "fieldtype": "Select",
+   "label": "Challan Brand",
+   "options": "Samsung\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice #",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dont_know_delivery_date",
+   "fieldtype": "Check",
+   "label": "Don't know Delivery Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "call_and_go",
+   "fieldtype": "Check",
+   "label": "Call & Go"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "internal_remarks",
+   "fieldtype": "Data",
+   "label": "Internal Remarks"
+  },
+  {
+   "fieldname": "customer_remarks",
+   "fieldtype": "Data",
+   "label": "Customer Remarks"
+  },
+  {
+   "fieldname": "product_details_section",
+   "fieldtype": "Section Break",
+   "label": "Product Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Delivery Challan Item2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Int",
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "original_delivery_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Original Delivery Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.customer_name",
+   "fieldname": "customer_name_hidden",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Customer Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-20 11:01:52.241122",
+ "modified_by": "Administrator",
+ "module": "Alpha",
+ "name": "Delivery Challan 2",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ADH User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
